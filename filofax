@@ -1,7 +1,7 @@
 #!/bin/bash
-# $Id: filofax,v 1.24 2016/01/27 09:47:24 fulford Exp fulford $
+# $Id: filofax,v 1.25 2016/01/27 09:52:05 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/filofax,v $
-# $Revision: 1.24 $
+# $Revision: 1.25 $
 # Author C W Fulford.
 # Copyright 2013 (c) C W Fulford. All rights reserved.
 # For assistance contact fulford@fulford.net 0709 229 5385
@@ -37,8 +37,8 @@ else
 fi
 if [ $xserver = : ];then
       	xterm -display :0.0 -bg $bg -fg $fg -T "$title" -geometry 80x24 \
-		-fs 10 -e "vim $file" &
+		-fs 10 -e "$vi $file" &
 else
-	vim $file
+	$vi $file
 fi
 
