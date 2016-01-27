@@ -1,0 +1,44 @@
+#!/bin/bash
+# $Id: filofax,v 1.24 2016/01/27 09:47:24 fulford Exp fulford $
+# $Source: /src/merlin/usr/local/etc/RCS/filofax,v $
+# $Revision: 1.24 $
+# Author C W Fulford.
+# Copyright 2013 (c) C W Fulford. All rights reserved.
+# For assistance contact fulford@fulford.net 0709 229 5385
+###################################################################
+cmd=`basename $0`
+syntax="$cmd [-c <config>] [-d] [-f <data_file>] [-v] [-X]"
+while [ $# -gt 0 ];do
+	case $1 in
+		-c) conf=$2;shift 2;;
+		-d) set -x;debug=:;shift;;
+		-f) file=$2;shift 2;;
+		-V) view=:;shift;;
+		-v) verbose=:;shift;;
+		-X) xserver="false";shift;;
+		-*) echo $syntax >&2;exit;;
+		*)f=$1;shift;;	
+	esac
+done
+#set defaults
+conf=~/.filofax.cf
+fg=white;bg=blue;title="Filofax"
+file=~/filofax/main
+user=`id -nu`
+xserver=${xserver:-":"}
+[ -f $conf ]||conf=/usr/local/etc/filofax.cf
+vi=/usr/bin/vim
+[ $view ] && vi=/usr/bin/view
+
+if [ ! -r $conf ];then
+	echo "$cmd: config file not found, using defaults!">&2
+else
+	eval `gawk -F: -v u=$user '$1~u{print $2}' $conf`
+fi
+if [ $xserver = : ];then
+      	xterm -display :0.0 -bg $bg -fg $fg -T "$title" -geometry 80x24 \
+		-fs 10 -e "vim $file" &
+else
+	vim $file
+fi
+

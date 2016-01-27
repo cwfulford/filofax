@@ -1,0 +1,22 @@
+<pre>
+
+#$Id: filofax.cf,v 1.5 2014/01/29 10:55:42 fulford Exp $
+# Format &#60;username&#62;:&#60;equate&#62;[;&#60;equate&#62;;&#60;equate&#62; ...]
+# ###########################################################
+fulford:file=~/cwf/filofax/main;bg=blue;fg=white;title='Fact File'
+######################################################################
+# This program is free software: you can redistribute it and or      #
+# modify it under the terms of the Lesser GNU General Public License #
+# as published by the Free Software Foundation, either version 3 of  #
+# the License, or (at your option) any later version.                #
+#                                                                    #
+# This program is distributed in the hope that it will be useful,    #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of     #    
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      #
+# GNU General Public License for more details.                       #
+#                                                                    # 
+# A copy of the Lesser GNU General Public License and the GNU        #
+# General Public License is available at                             #
+# &#60;http://www.gnu.org/licenses/&#62;.                                    #
+######################################################################
+</pre>

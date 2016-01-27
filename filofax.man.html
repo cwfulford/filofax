@@ -1,0 +1,174 @@
+
+<p><a href="#heading1">NAME</a><br/>
+<a href="#heading2">SYNOPSIS</a><br/>
+<a href="#heading3">AVAILABILITY</a><br/>
+<a href="#heading4">DESCRIPTION</a><br/>
+<a href="#heading5">OPTIONS</a><br/>
+<a href="#heading6">FILES</a><br/>
+<a href="#heading7">EXAMPLES</a><br/>
+<a href="#heading8">BUGS</a><br/>
+<a href="#heading9">SEE ALSO</a><br/>
+<a href="#heading10">AUTHOR</a><br/>
+<a href="#heading11">HISTORY</a><br/>
+
+</p>
+<hr/>
+
+
+<h2 id="heading1">NAME
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b><a href="./scripts.php?script=filofax">filofax</a></b>
+- opens an old encrypted text file containing names,
+addresses, passwords and other miscellaneous data regarding
+accounts, systems, clients, friends and family.</p>
+
+<h2 id="heading2">SYNOPSIS
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b><a href="./scripts.php?script=filofax">filofax</a></b>
+[<b>-c</b> <i>&lt;config_file&gt;</i>] [<b>-d</b>]
+[<b>-v</b> ] [<b>-X</b>] [ <i>&lt;datafile&gt;</i>]</p>
+
+<h2 id="heading3">AVAILABILITY
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b><a href="./scripts.php?script=filofax">filofax</a></b>
+is a Bourne shell script which should work equally well on
+all versions of UNIX, Linux and Mac OS X.</p>
+
+<h2 id="heading4">DESCRIPTION
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b><a href="./scripts.php?script=filofax">filofax</a></b>
+is a very personal tool that makes it quicker and easier to
+open an encrypted text file which contains data that has
+been collected over a period of 30 years and is probably my
+most important asset. Originally it was used to generate
+pages for my Filofax. Over the years I have tried many times
+to replace it with various off the shelf utilities and
+databases but have always ended up coming back to this
+simple irrational file. I can&rsquo;t imagine anyone else
+would use it in this form but the script does illustrate
+some useful basic techniques.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The <b>id</b>
+command is used to identify the correct record in the
+configuration file and the location of the data file.</p>
+
+<h2 id="heading5">OPTIONS
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>-c</b>
+&lt;<i>configuration_file</i>&gt;</p>
+
+<p style="margin-left:18%;">Use the specified configuration
+file in preference to the default
+<i>&quot;/usr/local/etc/filofax.cf&quot;</i>. If no
+configuration file is found <a href="./scripts.php?script=filofax">filofax</a> will soldier on using
+the defaults.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<colgroup><col width="11%"></col>
+<col width="3%"></col>
+<col width="4%" class="center"></col>
+<col width="82%"></col>
+</colgroup>
+<tr valign="top" align="left">
+<td></td>
+<td>
+
+
+<p><b>-d</b></p></td>
+<td></td>
+<td>
+
+
+<p>Set debug mode on. The <b>-x</b> option is set within
+the shell and each command in the script is echoed to the
+console.</p> </td></tr>
+<tr valign="top" align="left">
+<td></td>
+<td>
+
+
+<p><b>-v</b></p></td>
+<td></td>
+<td>
+
+
+<p>Set verbose mode on. Does absolutely nothing at the
+moment but I always include this option and may add
+something at a later stage.</p></td></tr>
+<tr valign="top" align="left">
+<td></td>
+<td>
+
+
+<p><b>-X</b></p></td>
+<td></td>
+<td>
+
+
+<p>Don&rsquo;t use X windows just start an editor in the
+current shell. Useful if accessing over an <b>ssh</b>
+connection.</p> </td></tr>
+</table>
+
+<p style="margin-left:11%;">&lt;<i>data_file</i>&gt;</p>
+
+<p style="margin-left:18%;">Entering the name of the data
+file on the command line overrides the default data file
+&quot;~/<a href="./scripts.php?script=filofax">filofax</a>/main&quot; and any file name set in the
+configuration file.</p>
+
+<h2 id="heading6">FILES
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i><a href="./scripts.php?script=filofax.cf">filofax.cf</a></i>.</p>
+
+<h2 id="heading7">EXAMPLES
+</h2>
+
+<pre style="margin-left:22%; margin-top: 1em">filofax</pre>
+
+<p style="margin-left:11%; margin-top: 1em">Start a new
+terminal and open the data file. The file name and the
+foreground and background colours for the terminal are set
+in the configuration file. If the configuration file does
+not exist use the default settings.</p>
+
+<h2 id="heading8">BUGS
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The script is
+quite crude and has very little, if any, error checking. The
+consequences of unexpected input are untested.</p>
+
+<h2 id="heading9">SEE ALSO
+</h2>
+
+
+<h2 id="heading10">AUTHOR
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Clifford W
+Fulford, <a href="http://www.citylinux.com"
+title="Go to the City Linux homepage">
+City Linux
+</a>. Contact <a href="mailto:fulford@fulford.net" title="Send mail to Clifford W Fulford">fulford@fulford.net</a> or +44
+(0)709 229 5385.</p>
+
+<h2 id="heading11">HISTORY
+</h2>
+<hr/>
