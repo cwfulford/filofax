@@ -1,4 +1,4 @@
-.TH FILOFAX 8l "17th March r
+.TH FILOFAX 8l "17th March r1.31
 .SH NAME
 .B filofax
 - opens an old encrypted text file containing names, addresses, passwords and
